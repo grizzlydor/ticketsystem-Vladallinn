@@ -6,17 +6,28 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    public class MC
+    public class MC : Car
     {
-        public string Licenseplate { get; set; }
-        public DateTime date { get; set; }
+        //public string Licenseplate { get; set; }
+        //public DateTime date { get; set; }
 
-        public double Price()
+        public MC()
+        {
+
+        }
+
+        public MC(string licenseplate, DateTime date)
+        {
+            Licenseplate = licenseplate;
+            Date = date;
+        }
+
+        public override double Price()
         {
             return 125.0;
         }
 
-        public string Vehicle()
+        public override string VehicleType()
         {
             return "MC";
         }

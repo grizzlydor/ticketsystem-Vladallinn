@@ -32,7 +32,7 @@ namespace ClassLibraryTicketSystem.Tests
         {
             var obj = new MC();
 
-            var actualValue = obj.Vehicle();
+            var actualValue = obj.VehicleType();
 
             Assert.AreEqual("MC", actualValue);
         }

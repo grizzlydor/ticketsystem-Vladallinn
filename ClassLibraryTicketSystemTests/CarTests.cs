@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Moq;
 
 namespace ClassLibraryTicketSystem.Tests
 {
@@ -18,9 +19,14 @@ namespace ClassLibraryTicketSystem.Tests
         [TestMethod()]
         public void PriceTest()
         {
-            var obj = new Car();
+            var mock = new Mock<Car>()
+            {
+                CallBase = true
+            };
 
-            var actualValue = obj.Price();
+            mock.Setup(x => x.Price()).Returns(240.0);
+
+            var actualValue = mock.Object.Price();
 
             Assert.AreEqual(240.0, actualValue);
         }
@@ -31,9 +37,14 @@ namespace ClassLibraryTicketSystem.Tests
         [TestMethod()]
         public void VehicleTypeTest()
         {
-            var obj = new Car();
+            var mock = new Mock<Car>()
+            {
+                CallBase = true
+            };
 
-            var actualValue = obj.VehicleType();
+            mock.Setup(x => x.VehicleType()).Returns("Car");
+
+            var actualValue = mock.Object.VehicleType();
 
             Assert.AreEqual("Car", actualValue);
         }

@@ -2,7 +2,7 @@
 
 namespace ClassLibraryTicketSystem
 {
-    public class Car
+    public abstract class Car
     {
         public string Licenseplate { get; set; }
         public DateTime Date { get; set; }
@@ -14,12 +14,12 @@ namespace ClassLibraryTicketSystem
         //    Date = date;
         //}
 
-        public double Price()
+        public virtual double Price()
         {
             return 240.0;
         }
 
-        public string VehicleType()
+        public virtual string VehicleType()
         {
             return "Car";
         }
