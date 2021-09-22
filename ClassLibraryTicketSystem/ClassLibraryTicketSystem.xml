@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibraryTicketSystem</name>
+    </assembly>
+    <members>
+        <member name="M:ClassLibraryTicketSystem.Car.Price">
+            <summary>
+            Method is virtual and can be override. Method is returning fixed amount. 
+            </summary>
+            <returns>240.0</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Car.VehicleType">
+            <summary>
+            Method is virtual and can be override. Method is returning string.
+            </summary>
+            <returns>Car</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.MC.Price">
+            <summary>
+            Method is override from Car class. Method is returning fixed amount.
+            </summary>
+            <returns>125</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.MC.VehicleType">
+            <summary>
+            Method is override. Method is returning string.
+            </summary>
+            <returns>MC</returns>
+        </member>
+    </members>
+</doc>

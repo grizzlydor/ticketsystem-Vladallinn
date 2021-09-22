@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class MCTests
     {
         /// <summary>
         /// The method Price is returning fixed price. The actualValue is 125.0.
         /// </summary>
-        [TestMethod()]
+        [TestMethod]
         public void PriceTest()
         {
-            var obj = new MC();
+            var obj = new MC(true, 5, DateTime.Now, "Pro");
 
             var actualValue = obj.Price();
 
@@ -27,14 +27,27 @@ namespace ClassLibraryTicketSystem.Tests
         /// <summary>
         /// The method VehicleType is returning string. The actualValue is "MC".
         /// </summary>
-        [TestMethod()]
-        public void VehicleTest()
+        [TestMethod]
+        public void VehicleTypeTest()
         {
-            var obj = new MC();
+            var obj = new MC(true, 5, DateTime.Now, "Pro");
 
             var actualValue = obj.VehicleType();
 
             Assert.AreEqual("MC", actualValue);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [TestMethod]
+        public void DiscountPriceTest()
+        {
+            var obj = new MC(true, 5, DateTime.Now, "Pro");
+
+            var actualValue = obj.DiscountPrice(240,5);
+
+            Assert.AreEqual(228, actualValue);
         }
     }
 }
