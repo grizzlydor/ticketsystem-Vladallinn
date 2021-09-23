@@ -45,9 +45,35 @@ namespace ClassLibraryTicketSystem.Tests
         {
             var obj = new MC(true, 5, DateTime.Now, "Pro");
 
-            var actualValue = obj.DiscountPrice(240,5);
+            var actualValue = obj.DiscountPrice(240, 5);
 
             Assert.AreEqual(228, actualValue);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [TestMethod]
+        public void CheckLicenseTest()
+        {
+            var obj = new MC("");
+
+            var actualValue = obj.Licenseplate;
+
+            Assert.AreEqual(true, actualValue);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [TestMethod]
+        public void Check_Discount_For_Normal_Client()
+        {
+            var obj = new MC(true);
+
+            var actualValue = obj.DiscountPrice();
+
+            Assert.AreEqual(118.75, actualValue);
         }
     }
 }

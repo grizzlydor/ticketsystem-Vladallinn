@@ -6,25 +6,47 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    public class MC : Car
+    /// <summary>
+    /// 
+    /// </summary>
+    public class MC : Machine
     {
-        //public string _licenseplate { get; set; }
-        //public DateTime date { get; set; }
+        //private string Licenseplate { get; set; }
+        //private DateTime date { get; set; }
 
-        //public MC(string licenseplate) : base(licenseplate)
-        //{
-        //    //_licenseplate = licenseplate;
-        //}
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="brobrizz"></param>
+        /// <param name="discount"></param>
+        /// <param name="date"></param>
+        /// <param name="license"></param>
         public MC(bool brobrizz, double discount, DateTime date, string license ) : base (brobrizz, date, license, discount)
         {
                 
         }
-        //public MC(string licenseplate /*DateTime date*/) : base (licenseplate, /*date*/)
-        //{
-        //    Licenseplate = licenseplate;
-        //    //Date = date;
-        //}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="licenseplate"></param>
+        public MC(string licenseplate) : base(licenseplate)
+        {
+                
+        }
+
+        public MC(bool brobrizz) : base(brobrizz)
+        {
+                
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public MC()
+        {
+                
+        }
+        
 
         /// <summary>
         /// Method is override from Car class. Method is returning fixed amount.
@@ -44,16 +66,24 @@ namespace ClassLibraryTicketSystem
             return "MC";
         }
 
-
-        public override double DiscountPrice(double price, double discount)
+        /// <summary>
+        /// Method which counts discount for customer. 
+        /// </summary>
+        /// <param name="price">The whole price for the service.</param>
+        /// <param name="discount">The discount for this service.</param>
+        /// <returns></returns>
+        public double DiscountPrice()
         {
-            if (Brobizz == true)
+            //MC dibo = new MC();
+
+            //var price = dibo.Price();
+            var price = Price();
+            if (Brobizz is true)
             {
-                return price - (price * discount / 100);
+                return price - (price * 5 / 100);
             }
             return price;
         }
-
 
     }
 }

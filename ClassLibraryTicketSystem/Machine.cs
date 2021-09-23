@@ -1,26 +1,26 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public class Car : Machine
+    public abstract class Machine 
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        public bool Brobizz { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public double Discount { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
         
+        /// <summary>
+        /// 
+        /// </summary>
+        protected bool Brobizz { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        private double Discount { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+
         public string Licenseplate
         {
             get => Licenseplate;
@@ -36,7 +36,7 @@ namespace ClassLibraryTicketSystem
         /// <summary>
         /// 
         /// </summary>
-        public DateTime Date { get; set; }
+        private DateTime Date { get; set; }
 
         /// <summary>
         /// 
@@ -45,7 +45,7 @@ namespace ClassLibraryTicketSystem
         /// <param name="date"></param>
         /// <param name="licenseplate"></param>
         /// <param name="discount"></param>
-        public Car(bool broobrizz, DateTime date, string licenseplate, double discount)
+        public Machine(bool broobrizz, DateTime date, string licenseplate, double discount)
         {
             Brobizz = broobrizz;
             Date = date;
@@ -56,21 +56,24 @@ namespace ClassLibraryTicketSystem
         /// 
         /// </summary>
         /// <param name="licenseplate"></param>
-        public Car(string licenseplate)
+        public Machine(string licenseplate)
         {
             Licenseplate = licenseplate;
         }
 
-        public Car(bool broobriz) : base(broobriz)
+
+        public Machine(bool brobizz)
         {
-            Brobizz = broobriz;
+            Brobizz = brobizz;
+
         }
+
         /// <summary>
         /// 
         /// </summary>
-        public Car()
+        public Machine()
         {
-                
+
         }
 
         /// <summary>
@@ -95,16 +98,14 @@ namespace ClassLibraryTicketSystem
         /// <param name="price"></param>
         /// <param name="discount"></param>
         /// <returns></returns>
-        public double DiscountPrice()
+        public virtual double DiscountPrice(double price, double discount)
         {
-            var price = Price();
-            if (Brobizz is true)
+            if (Brobizz == true)
             {
-                return price - (price * 5 / 100);
+                return price - (price * discount / 100);
             }
             return price;
         }
-        
     }
-
 }
+
