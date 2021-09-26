@@ -15,9 +15,9 @@ namespace ClassLibraryTicketSystem.Tests
         /// The method Price is returning fixed price. The actualValue is 125.0.
         /// </summary>
         [TestMethod]
-        public void PriceTest()
+        public void GetPrice_ByMethodPrice_Return125()
         {
-            var obj = new MC(true, 5, DateTime.Now, "Pro");
+            var obj = new MC();
 
             var actualValue = obj.Price();
 
@@ -28,9 +28,9 @@ namespace ClassLibraryTicketSystem.Tests
         /// The method VehicleType is returning string. The actualValue is "MC".
         /// </summary>
         [TestMethod]
-        public void VehicleTypeTest()
+        public void GetVehicleType_ByMethodVehicleType_ReturnStringMC()
         {
-            var obj = new MC(true, 5, DateTime.Now, "Pro");
+            var obj = new MC();
 
             var actualValue = obj.VehicleType();
 
@@ -41,9 +41,9 @@ namespace ClassLibraryTicketSystem.Tests
         /// 
         /// </summary>
         [TestMethod]
-        public void DiscountPriceTest()
+        public void GetDiscount_ByMethodDiscountPrice_Return228()
         {
-            var obj = new MC(true, 5, DateTime.Now, "Pro");
+            var obj = new MC(true, 5);
 
             var actualValue = obj.DiscountPrice(240, 5);
 
@@ -54,26 +54,13 @@ namespace ClassLibraryTicketSystem.Tests
         /// 
         /// </summary>
         [TestMethod]
-        public void CheckLicenseTest()
+        public void GetLicenseplate_ByTheObject_ThrowArgumentException()
         {
-            var obj = new MC("");
+            var obj = new MC("12345678");
 
-            var actualValue = obj.Licenseplate;
-
-            Assert.AreEqual(true, actualValue);
+            Assert.ThrowsException<ArgumentException>(() => obj.Licenseplate = "12345678");
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        [TestMethod]
-        public void Check_Discount_For_Normal_Client()
-        {
-            var obj = new MC(true);
 
-            var actualValue = obj.DiscountPrice();
-
-            Assert.AreEqual(118.75, actualValue);
-        }
     }
 }

@@ -8,70 +8,47 @@ namespace ClassLibraryTicketSystem
 {
     public abstract class Machine 
     {
-        
-        /// <summary>
-        /// 
-        /// </summary>
         protected bool Brobizz { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
         private double Discount { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-
         public string Licenseplate
         {
             get => Licenseplate;
             set
             {
-                if (value.Length > 7 || value.Length < 0)
+                if (value.Length > 7 && value.Length < 0)
                 {
                     throw new ArgumentException($"Can not be less than 1 and more than 7 characters. You entered: {value}");
                 }
                 Licenseplate = value;
             }
         }
-        /// <summary>
-        /// 
-        /// </summary>
         private DateTime Date { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="broobrizz"></param>
-        /// <param name="date"></param>
-        /// <param name="licenseplate"></param>
-        /// <param name="discount"></param>
-        public Machine(bool broobrizz, DateTime date, string licenseplate, double discount)
-        {
-            Brobizz = broobrizz;
-            Date = date;
-            Licenseplate = licenseplate;
-            Discount = discount;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="licenseplate"></param>
-        public Machine(string licenseplate)
+        
+        protected Machine(string licenseplate)
         {
             Licenseplate = licenseplate;
         }
 
-
-        public Machine(bool brobizz)
+        protected Machine(bool brobizz)
         {
             Brobizz = brobizz;
 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public Machine()
+        protected Machine(bool brobizz, double discount)
+        {
+            Brobizz = brobizz;
+            Discount = discount;
+        }
+
+        protected Machine(bool broobrizz, DateTime date)
+        {
+            Brobizz = broobrizz;
+            Date = date;
+        }
+
+        protected Machine()
         {
 
         }

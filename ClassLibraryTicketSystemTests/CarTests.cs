@@ -17,7 +17,7 @@ namespace ClassLibraryTicketSystem.Tests
         /// The method Price is returning fixed price. The actualValue is 240.0.
         /// </summary>
         [TestMethod()]
-        public void PriceTest()
+        public void GetPrice_ByMethodPrice_Return240()
         {
             var obj = new Car();
 
@@ -30,7 +30,7 @@ namespace ClassLibraryTicketSystem.Tests
         /// The method VehicleType is returning string. The actualValue is "Car".
         /// </summary>
         [TestMethod()]
-        public void VehicleTypeTest()
+        public void GetVehicleType_ByMethodVehicleType_ReturnStringCar()
         {
             var obj = new Car();
 
@@ -43,13 +43,26 @@ namespace ClassLibraryTicketSystem.Tests
         /// Test which 
         /// </summary>
         [TestMethod()]
-        public void DiscountPriceTest()
+        public void GetDiscount_ByMethodDiscountPrice_Return228()
         {
             var obj = new Car(true);
 
             var actualValue = obj.DiscountPrice();
 
             Assert.AreEqual(228, actualValue);
+        }
+        /// <summary>
+        /// The method is making discount for the weekend and also if you have special card you are getting discount. 
+        /// </summary>
+        [TestMethod()]
+        public void GetWeekendDiscountPrice_ByMethodWeekendDiscount_Return182()
+        {
+            
+            var obj = new Car(true);
+
+            var actualValue = obj.WeekendDiscount();
+
+            Assert.AreEqual(182.4, actualValue);
         }
     }
 }

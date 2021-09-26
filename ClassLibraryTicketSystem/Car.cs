@@ -4,70 +4,46 @@ using System.Diagnostics;
 
 namespace ClassLibraryTicketSystem
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    
     public class Car : Machine
     {
-        /// <summary>
-        /// 
-        /// </summary>
+        
         public bool Brobizz { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
+        
         public double Discount { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
+        
         
         public string Licenseplate
         {
             get => Licenseplate;
             set
             {
-                if (value.Length > 7 || value.Length < 0)
+                if (value.Length > 7 && value.Length < 0)
                 {
                     throw new ArgumentException($"Can not be less than 1 and more than 7 characters. You entered: {value}");
                 }
                 Licenseplate = value;
             }
         }
-        /// <summary>
-        /// 
-        /// </summary>
+        
         public DateTime Date { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="broobrizz"></param>
-        /// <param name="date"></param>
-        /// <param name="licenseplate"></param>
-        /// <param name="discount"></param>
-        public Car(bool broobrizz, DateTime date, string licenseplate, double discount)
+        
+        public Car(string licenseplate) : base(licenseplate)
         {
-            Brobizz = broobrizz;
-            Date = date;
-            Licenseplate = licenseplate;
-            Discount = discount;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="licenseplate"></param>
-        public Car(string licenseplate)
-        {
-            Licenseplate = licenseplate;
+           
         }
 
         public Car(bool broobriz) : base(broobriz)
         {
             Brobizz = broobriz;
         }
-        /// <summary>
-        /// 
-        /// </summary>
+
+        public Car(bool broobrizz, DateTime date) : base (broobrizz, date)
+        {
+            
+        }
+        
         public Car()
         {
                 
@@ -89,12 +65,11 @@ namespace ClassLibraryTicketSystem
         {
             return "Car";
         }
+        
         /// <summary>
-        /// 
+        /// This method is checking discount. 
         /// </summary>
-        /// <param name="price"></param>
-        /// <param name="discount"></param>
-        /// <returns></returns>
+        /// <returns>Price</returns>
         public double DiscountPrice()
         {
             var price = Price();
@@ -104,7 +79,28 @@ namespace ClassLibraryTicketSystem
             }
             return price;
         }
-        
+
+        /// <summary>
+        /// The method is taking normal price and making discount for weekend and after making discount for Brobizz. 
+        /// </summary>
+        /// <returns></returns>
+        public double WeekendDiscount()
+        {
+            var price = Price();
+            DateTime d = DateTime.Now;
+            d = new DateTime(2021, 9, 25);
+            if (d.DayOfWeek == DayOfWeek.Saturday || d.DayOfWeek == DayOfWeek.Sunday)
+            {
+                var result =  price - (price * 20 / 100);
+                if (Brobizz is true)
+                {
+                    return result - (result * 5 / 100);
+                }
+
+                return result;
+            }
+            return price - (price * 5 / 100); 
+        }
     }
 
 }

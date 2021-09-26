@@ -12,8 +12,11 @@ namespace ClassLibraryTicketSystem.Tests
     [TestClass]
     public class MachineTests
     {
+        /// <summary>
+        /// This test is checking exception. Should be not more than 7 characters. 
+        /// </summary>
         [TestMethod()]
-        public void CheckLicenseTest()
+        public void GetLicenseplate_ByTheObject_ThrowArgumentException()
         {
             var mock = new Mock<Machine>();
             var machine = mock.Object;

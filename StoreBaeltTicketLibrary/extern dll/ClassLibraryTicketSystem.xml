@@ -4,6 +4,51 @@
         <name>ClassLibraryTicketSystem</name>
     </assembly>
     <members>
+        <member name="T:ClassLibraryTicketSystem.Car">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Car.Brobizz">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Car.Discount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Car.Licenseplate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Car.Date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Car.#ctor(System.Boolean,System.DateTime,System.String,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="broobrizz"></param>
+            <param name="date"></param>
+            <param name="licenseplate"></param>
+            <param name="discount"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Car.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="licenseplate"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Car.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:ClassLibraryTicketSystem.Car.Price">
             <summary>
             Method is virtual and can be override. Method is returning fixed amount. 
@@ -16,6 +61,97 @@
             </summary>
             <returns>Car</returns>
         </member>
+        <member name="M:ClassLibraryTicketSystem.Car.DiscountPrice">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Machine.Brobizz">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Machine.Discount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Machine.Licenseplate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Machine.Date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Machine.#ctor(System.Boolean,System.DateTime,System.String,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="broobrizz"></param>
+            <param name="date"></param>
+            <param name="licenseplate"></param>
+            <param name="discount"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Machine.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="licenseplate"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Machine.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Machine.Price">
+            <summary>
+            Method is virtual and can be override. Method is returning fixed amount. 
+            </summary>
+            <returns>240.0</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Machine.VehicleType">
+            <summary>
+            Method is virtual and can be override. Method is returning string.
+            </summary>
+            <returns>Car</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Machine.DiscountPrice(System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="price"></param>
+            <param name="discount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibraryTicketSystem.MC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.MC.#ctor(System.Boolean,System.Double,System.DateTime,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="brobrizz"></param>
+            <param name="discount"></param>
+            <param name="date"></param>
+            <param name="license"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.MC.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="licenseplate"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.MC.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:ClassLibraryTicketSystem.MC.Price">
             <summary>
             Method is override from Car class. Method is returning fixed amount.
@@ -27,6 +163,14 @@
             Method is override. Method is returning string.
             </summary>
             <returns>MC</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.MC.DiscountPrice">
+            <summary>
+            Method which counts discount for customer. 
+            </summary>
+            <param name="price">The whole price for the service.</param>
+            <param name="discount">The discount for this service.</param>
+            <returns></returns>
         </member>
     </members>
 </doc>

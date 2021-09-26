@@ -6,42 +6,29 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    
     public class MC : Machine
     {
+        public bool Brobizz { get; set; }
         //private string Licenseplate { get; set; }
         //private DateTime date { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="brobrizz"></param>
-        /// <param name="discount"></param>
-        /// <param name="date"></param>
-        /// <param name="license"></param>
-        public MC(bool brobrizz, double discount, DateTime date, string license ) : base (brobrizz, date, license, discount)
+        
+        public MC(bool brobrizz, double discount) : base (brobrizz, discount)
         {
                 
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="licenseplate"></param>
+        
         public MC(string licenseplate) : base(licenseplate)
         {
-                
+            //Licenseplate = licenseplate;
         }
 
         public MC(bool brobrizz) : base(brobrizz)
         {
-                
+            Brobizz = brobrizz;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public MC()
         {
                 
@@ -74,9 +61,6 @@ namespace ClassLibraryTicketSystem
         /// <returns></returns>
         public double DiscountPrice()
         {
-            //MC dibo = new MC();
-
-            //var price = dibo.Price();
             var price = Price();
             if (Brobizz is true)
             {

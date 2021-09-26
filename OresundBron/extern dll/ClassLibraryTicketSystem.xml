@@ -48,6 +48,11 @@
             <param name="discount"></param>
             <returns></returns>
         </member>
+        <member name="T:ClassLibraryTicketSystem.MC">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:ClassLibraryTicketSystem.MC.Price">
             <summary>
             Method is override from Car class. Method is returning fixed amount.
