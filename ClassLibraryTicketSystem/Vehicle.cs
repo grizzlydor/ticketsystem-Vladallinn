@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    public abstract class Machine 
+    public abstract class Vehicle 
     {
         protected bool Brobizz { get; set; }
         private double Discount { get; set; }
@@ -25,30 +25,30 @@ namespace ClassLibraryTicketSystem
         private DateTime Date { get; set; }
 
         
-        protected Machine(string licenseplate)
+        protected Vehicle(string licenseplate)
         {
             Licenseplate = licenseplate;
         }
 
-        protected Machine(bool brobizz)
+        protected Vehicle(bool brobizz)
         {
             Brobizz = brobizz;
 
         }
 
-        protected Machine(bool brobizz, double discount)
+        protected Vehicle(bool brobizz, double discount)
         {
             Brobizz = brobizz;
             Discount = discount;
         }
 
-        protected Machine(bool broobrizz, DateTime date)
+        protected Vehicle(bool broobrizz, DateTime date)
         {
             Brobizz = broobrizz;
             Date = date;
         }
 
-        protected Machine()
+        protected Vehicle()
         {
 
         }
@@ -70,7 +70,7 @@ namespace ClassLibraryTicketSystem
             return "Car";
         }
         /// <summary>
-        /// 
+        /// Method is virtual and can be override. Method is returning double.
         /// </summary>
         /// <param name="price"></param>
         /// <param name="discount"></param>

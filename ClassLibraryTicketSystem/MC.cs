@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ClassLibraryTicketSystem
 {
     
-    public class MC : Machine
+    public class MC : Vehicle
     {
         public bool Brobizz { get; set; }
         //private string Licenseplate { get; set; }

@@ -38,7 +38,7 @@ namespace ClassLibraryTicketSystem.Tests
         }
 
         /// <summary>
-        /// 
+        /// The method DiscountPrice is returning price with discount. The actualValue is "228"
         /// </summary>
         [TestMethod]
         public void GetDiscount_ByMethodDiscountPrice_Return228()
@@ -51,7 +51,7 @@ namespace ClassLibraryTicketSystem.Tests
         }
 
         /// <summary>
-        /// 
+        /// This method used for catching exception. Can not be less than 1 and more than 7 characters.
         /// </summary>
         [TestMethod]
         public void GetLicenseplate_ByTheObject_ThrowArgumentException()

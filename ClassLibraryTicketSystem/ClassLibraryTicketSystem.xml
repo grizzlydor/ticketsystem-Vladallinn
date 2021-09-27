@@ -28,26 +28,6 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:ClassLibraryTicketSystem.Machine.Price">
-            <summary>
-            Method is virtual and can be override. Method is returning fixed amount. 
-            </summary>
-            <returns>240.0</returns>
-        </member>
-        <member name="M:ClassLibraryTicketSystem.Machine.VehicleType">
-            <summary>
-            Method is virtual and can be override. Method is returning string.
-            </summary>
-            <returns>Car</returns>
-        </member>
-        <member name="M:ClassLibraryTicketSystem.Machine.DiscountPrice(System.Double,System.Double)">
-            <summary>
-            
-            </summary>
-            <param name="price"></param>
-            <param name="discount"></param>
-            <returns></returns>
-        </member>
         <member name="M:ClassLibraryTicketSystem.MC.Price">
             <summary>
             Method is override from Car class. Method is returning fixed amount.
@@ -66,6 +46,26 @@
             </summary>
             <param name="price">The whole price for the service.</param>
             <param name="discount">The discount for this service.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.Price">
+            <summary>
+            Method is virtual and can be override. Method is returning fixed amount. 
+            </summary>
+            <returns>240.0</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.VehicleType">
+            <summary>
+            Method is virtual and can be override. Method is returning string.
+            </summary>
+            <returns>Car</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.DiscountPrice(System.Double,System.Double)">
+            <summary>
+            Method is virtual and can be override. Method is returning double.
+            </summary>
+            <param name="price"></param>
+            <param name="discount"></param>
             <returns></returns>
         </member>
     </members>

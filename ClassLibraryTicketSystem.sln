@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryTicketSystemTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreBaeltTicketLibrary", "StoreBaeltTicketLibrary\StoreBaeltTicketLibrary.csproj", "{D65C8D63-DCFB-48DE-8F1E-63802CE16762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OresundBron", "OresundBron\OresundBron.csproj", "{EFAF0016-3DAE-4C80-83BF-64E5E190F35D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OresundBron", "OresundBron\OresundBron.csproj", "{EFAF0016-3DAE-4C80-83BF-64E5E190F35D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OresundBronTests", "OresundBronTests\OresundBronTests.csproj", "{3C19CA92-39EC-497C-8E98-F03B205D73A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OresundBronTests1", "OresundBronTests1\OresundBronTests1.csproj", "{6EEB99FE-81B9-49BC-B8F0-9C58BC6C648A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{EFAF0016-3DAE-4C80-83BF-64E5E190F35D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFAF0016-3DAE-4C80-83BF-64E5E190F35D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFAF0016-3DAE-4C80-83BF-64E5E190F35D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C19CA92-39EC-497C-8E98-F03B205D73A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C19CA92-39EC-497C-8E98-F03B205D73A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C19CA92-39EC-497C-8E98-F03B205D73A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C19CA92-39EC-497C-8E98-F03B205D73A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EEB99FE-81B9-49BC-B8F0-9C58BC6C648A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EEB99FE-81B9-49BC-B8F0-9C58BC6C648A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EEB99FE-81B9-49BC-B8F0-9C58BC6C648A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EEB99FE-81B9-49BC-B8F0-9C58BC6C648A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

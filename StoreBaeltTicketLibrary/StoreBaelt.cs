@@ -21,7 +21,11 @@ namespace StoreBaeltTicketLibrary
                 }
                 return result;
             }
-            return price - (price * 5 / 100);
+            if (mac.Brobizz is true)
+            {
+                return price - (price * 5 / 100);
+            }
+            return price;
         }
     }
 }

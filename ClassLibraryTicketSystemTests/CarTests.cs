@@ -40,7 +40,7 @@ namespace ClassLibraryTicketSystem.Tests
         }
 
         /// <summary>
-        /// Test which 
+        /// The method is making discount for the price. The actual value is 228.
         /// </summary>
         [TestMethod()]
         public void GetDiscount_ByMethodDiscountPrice_Return228()

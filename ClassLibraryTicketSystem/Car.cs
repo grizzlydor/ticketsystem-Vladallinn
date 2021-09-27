@@ -5,7 +5,7 @@ using System.Diagnostics;
 namespace ClassLibraryTicketSystem
 {
     
-    public class Car : Machine
+    public class Car : Vehicle
     {
         
         public bool Brobizz { get; set; }
