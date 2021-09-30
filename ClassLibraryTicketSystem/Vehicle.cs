@@ -8,6 +8,8 @@ namespace ClassLibraryTicketSystem
 {
     public abstract class Vehicle 
     {
+        //this is my changes to the code
+        //added this comment
         protected bool Brobizz { get; set; }
         private double Discount { get; set; }
         public string Licenseplate
